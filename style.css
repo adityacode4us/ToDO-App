@@ -1,0 +1,108 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+}
+.container{
+    margin-top:50px;
+    width: 50vw;
+    height: 60%;
+    border:3px solid yellow;
+    border-radius: 15px;
+    position: relative;
+}
+.container h4{
+    margin:5px;
+    text-align: center;
+}
+.container h4 span{
+    padding:5px;
+    border-bottom:2px solid white;
+
+}
+
+.container .list{
+    margin:20px;
+    height: 240px;
+    border:3 px solid  teal;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+.container .list ul{
+    list-style-type: none;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:4px 0px;
+    overflow-y: auto;
+}
+.container .list ul li{
+    width: 80%;
+    border: 2px solid rgb(216, 181, 181);
+    margin:4px;
+    display: flex;
+    align-items: center;
+    padding:5px 5px;
+    position: relative;
+    border-radius: 10px;
+}
+.container .list ul li p{
+    text-align: justify;
+    width: 70%;
+    text-overflow: auto;
+}
+.container .list ul li i{
+    color: white;
+    position:absolute;
+    right: 15px;
+    cursor: pointer;
+}
+.container .list ul .change{
+    background-color: teal;
+    color: red;
+}
+.container .list ul .change span{
+    background-color: black;
+}
+.container .list ul li span{
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+
+.container .input{
+    width: 100%;
+    position: absolute;
+    bottom:2px;
+    display: flex;
+    justify-content: center;
+}
+
+.container .input input{
+    background-color: teal;
+    width: 70%;
+    outline: none;
+    border: none;
+    padding: 10px 10px;
+    color: white;
+}
+.container .input input::placeholder{
+    color:white;
+}
