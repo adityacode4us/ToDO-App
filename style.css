@@ -71,7 +71,7 @@ body{
 }
 .container .list ul .change{
     background-color: teal;
-    color: red;
+    color: #b0fc06;
 }
 .container .list ul .change span{
     background-color: black;
