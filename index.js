@@ -3,12 +3,15 @@ let todoitems=[];
 
 const todolist=document.querySelector(".list ul");
 
-todoitems=[];
+// todoitems=[];
 
 const render=()=>{
+    console.log(localStorage)
     todoitems=JSON.parse(localStorage.getItem("todoitems"));
+    // if(todoitems===null)
+    console.log(todoitems)
     todolist.innerHTML="";
-    if(todoitems.length===0){
+    if(todoitems===null || todoitems.length===0){
         todolist.textContent="Create today's work"
     }
     else{
@@ -21,6 +24,7 @@ const render=()=>{
             todolist.append(newElement);
         })
     }
+    console.log(localStorage)
 }  
 
 render();
@@ -34,7 +38,8 @@ inputitem.addEventListener("keypress",(e)=>{
         isCompleted:false
     }
     if(e.key=="Enter" &&data!==""){
-        todoitems=[...todoitems,todo];
+        todoitems=(todoitems===null)?[todo]:[...todoitems,todo];
+        // todoitems=[...todoitems,todo];
         localStorage.setItem("todoitems",JSON.stringify(todoitems));
         render();
         e.target.value="";
